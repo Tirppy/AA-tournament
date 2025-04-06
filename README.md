@@ -1,17 +1,16 @@
-# Adapt_Exploit Strategy
+# Adapt Exploit Strategy
 
-A dynamic strategy for the Prisoner's Dilemma tournament that combines adaptive behavior with strategic exploitation.
+A dynamic strategy for the Prisoner's Dilemma tournament that adapts based on opponent behavior patterns.
 
-## Algorithm Overview
+## How It Works
 
-This algorithm analyzes the opponent's cooperation patterns and adjusts its behavior accordingly:
+This algorithm:
+- Starts by cooperating
+- Analyzes the opponent's overall cooperation rate and recent behavior
+- Responds generously to highly cooperative opponents (>80% cooperation)
+- Uses conditional cooperation with moderately cooperative opponents
+- Punishes defectors while occasionally testing for cooperation
+- Recognizes specific patterns like alternating behavior
+- Implements an end-game defection strategy in the final rounds
 
-- Initially cooperates to establish goodwill
-- Evaluates overall cooperation rate and recent behavior patterns
-- Exploits highly cooperative opponents with occasional defection
-- Responds proportionally to moderately cooperative opponents
-- Primarily defects against uncooperative opponents with occasional cooperation
-- Detects and responds to specific patterns (like alternating behaviors)
-- Switches to defection in end-game scenarios
-
-The strategy balances between rewarding cooperation and punishing defection while incorporating pattern recognition and strategic timing elements to maximize points.
+The strategy balances exploitation of naive cooperators while maintaining cooperation with other reciprocating strategies, adapting its approach based on the opponent's history rather than using a fixed response pattern.
